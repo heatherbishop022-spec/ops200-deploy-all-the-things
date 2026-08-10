@@ -16,22 +16,22 @@ const projects = [
   'vstda'
 ];
 
-const checkValidHerokuUrl = (url) => {
-  expect(url).to.match(/(http|https):\/\/[A-Za-z0-9-]*.herokuapp.com(\/)?/, `Expected ${config.heroku_url} to match http://*.herokuapp.com`);
+const checkValidVercelUrl = (url) => {
+  expect(url).to.match(/(http|https):\/\/[A-Za-z0-9-]*\.vercel\.app(\/)?/, `Expected ${url} to match https://*.vercel.app`);
 };
 
-describe('Heroku Workshop', function() {
+describe('Vercel Workshop', function() {
   this.timeout(6500);
   describe('config file', function() {
     projects.forEach((project) => {
-      it(`includes a key called "${project}" with a valid Heroku URL for a value`, () => {
+      it(`includes a key called "${project}" with a valid Vercel URL for a value`, () => {
         expect(config[project]).to.exist;
-        checkValidHerokuUrl(config[project]);
+        checkValidVercelUrl(config[project]);
       });
     });
   });
 
-  describe('heroku apps', function() {
+  describe('vercel apps', function() {
     projects.forEach((project) => {
       this.timeout(15000);
       it(`${project} is deployed`, (done) => {
