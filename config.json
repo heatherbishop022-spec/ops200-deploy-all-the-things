@@ -1,7 +1,7 @@
 {
-  "first_app": "",
-  "change_calculator": "",
-  "mortgage_calculator": "",
-  "top_spots": "",
-  "vstda": ""
+  "first_app": "https://web-102-change-calculator-weld.vercel.app",
+  "change_calculator": "https://react100-change-calculator-sigma.vercel.app",
+  "mortgage_calculator": "https://react100-mortgage-calculator-sigma.vercel.app",
+  "top_spots": "https://react100-san-diego-top-spots-chi.vercel.app",
+  "vstda": "https://react100-vstda-project-eight.vercel.app"
 }
